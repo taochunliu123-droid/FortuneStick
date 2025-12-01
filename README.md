@@ -1,96 +1,95 @@
-# 🎋 PM里長伯解籤大師 | Fortune Stick Oracle
+# 🔮 PM里長伯解籤大師 | Cyber Oracle
 
-一個結合傳統廟宇求籤體驗與 AI 解籤的互動式 Web 應用程式。
+賽博朋克風格的 AI 求籤應用，結合攝像頭實景、手勢追蹤與全息 HUD 界面。
 
-An interactive web application combining traditional temple fortune stick experience with AI interpretation.
+A cyberpunk-styled AI fortune stick oracle with camera background, gesture tracking, and holographic HUD interface.
 
 ## ✨ 功能特色 | Features
 
-### 🏮 視覺設計 | Visual Design
-- 傳統廟宇風格：金紅配色、古典籤筒、羊皮紙卷軸
-- 動態效果：搖籤動畫、煙霧繚繞、燈籠發光
+### 🎨 賽博朋克 HUD 界面
+- 青色 (#00FFFF) 為主色調的科幻 UI
+- 掃描線動畫、發光效果、數據流裝飾
+- 全息風格的籤筒與結果卡片
 
-### 🎯 核心功能 | Core Features
-1. **輸入問題**（可選）- Enter your question (optional)
-2. **搖籤筒** - Shake the fortune stick container
-3. **抽籤** - Draw from 60 classic fortune poems
-4. **AI 解籤** - AI Oracle interprets your fortune
+### 📷 攝像頭實景背景
+- 實時攝像頭畫面作為背景
+- 降低亮度、提高對比度的處理
+- 可開關控制
 
-### 🌐 雙語支援 | Bilingual Support
+### ✋ 手勢追蹤 (MediaPipe)
+- 即時手部骨骼追蹤
+- 青色發光的手部連線繪製
+- 張開手掌並揮動可觸發求籤
+
+### 🖨️ 列印輸出
+- 點擊「列印籤詩」按鈕
+- 自動切換為列印友好的排版
+- 可儲存為 PDF
+
+### 🌐 雙語支援
 - 中文 / English 一鍵切換
 
-## 🚀 部署到 Vercel | Deploy to Vercel
+## 🚀 部署到 Vercel
 
-### 方法一：一鍵部署 | One-Click Deploy
+### 1. 安裝依賴
+```bash
+npm install
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/fortune-sticks-oracle)
+### 2. 本地測試
+```bash
+npm run dev
+```
 
-### 方法二：手動部署 | Manual Deploy
+### 3. 部署
+```bash
+npx vercel
+```
 
-1. **安裝依賴**
-   ```bash
-   npm install
-   ```
+### 4. 環境變數（可選）
 
-2. **本地測試**
-   ```bash
-   npm run dev
-   ```
+| 變數名 | 說明 |
+|--------|------|
+| `ANTHROPIC_API_KEY` | Anthropic API Key（不設定也能運作）|
 
-3. **部署到 Vercel**
-   ```bash
-   npm i -g vercel
-   vercel
-   ```
-
-### 設定環境變數 | Environment Variables
-
-在 Vercel Dashboard 中設定：
-
-| 變數名稱 | 說明 |
-|---------|------|
-| `ANTHROPIC_API_KEY` | 你的 Anthropic API Key（可選，不設定則使用預設解籤）|
-
-> 💡 **提示**：即使沒有設定 API Key，應用程式也會正常運作，只是會使用預設的解籤內容而非 AI 生成。
-
-## 📁 專案結構 | Project Structure
+## 📁 專案結構
 
 ```
-fortune-sticks-vercel/
+fortune-cyber/
 ├── api/
-│   └── interpret.js      # Vercel Serverless API
+│   └── interpret.js      # AI 解籤 API
 ├── public/
-│   └── favicon.svg       # 網站圖標
+│   └── favicon.svg       # 賽博風格圖標
 ├── src/
-│   ├── App.jsx           # 主要 React 元件
-│   ├── fortuneData.js    # 60首籤詩資料
-│   ├── index.css         # 樣式
-│   └── main.jsx          # React 入口
-├── index.html            # HTML 入口
-├── package.json          # 專案設定
-├── tailwind.config.js    # Tailwind 設定
-├── vite.config.js        # Vite 設定
-└── vercel.json           # Vercel 設定
+│   ├── App.jsx           # 主要元件（HUD、手勢、籤筒）
+│   ├── data/
+│   │   └── fortunes.js   # 60首籤詩
+│   ├── index.css         # 賽博朋克樣式
+│   └── main.jsx
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── vercel.json
 ```
 
-## 🛠️ 技術棧 | Tech Stack
+## 🎮 操作說明
 
-- **Frontend**: React 18 + Vite
-- **Styling**: Tailwind CSS
+1. **開啟相機**：點擊左側面板的「開啟相機」
+2. **手勢求籤**：張開手掌對著攝像頭，在畫面中央揮動
+3. **點擊求籤**：也可以直接點擊籤筒
+4. **列印籤詩**：結果頁面點擊「列印籤詩」按鈕
+
+## 🛠️ 技術棧
+
+- **Frontend**: React 18 + Vite + Tailwind CSS
+- **手勢追蹤**: @mediapipe/tasks-vision
 - **API**: Vercel Edge Functions
-- **AI**: Anthropic Claude API (optional)
-
-## 📜 籤詩來源 | Fortune Poems
-
-本應用使用經典「觀音靈籤」60 首，每首包含：
-- 籤號 (Fortune number)
-- 吉凶等級 (Fortune level)
-- 四句籤詩 (Four-line poem)
-- 基本解釋 (Basic interpretation)
+- **AI**: Anthropic Claude (optional)
 
 ## 📄 授權 | License
 
-MIT License
+MIT
 
 ## 👨‍💻 作者 | Author
 
@@ -98,6 +97,4 @@ MIT License
 
 ---
 
-🙏 心誠則靈 • 善緣廣結
-
-*Sincerity Brings Blessings • Good Karma Connects All*
+🔮 心誠則靈 • SINCERITY BRINGS BLESSINGS

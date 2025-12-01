@@ -4,14 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PM里長伯解籤大師 - AI Fortune Stick Oracle | 誠心祈願，靈籤指引" />
-    <meta property="og:title" content="PM里長伯解籤大師 | Fortune Stick Oracle" />
-    <meta property="og:description" content="搖籤筒求籤，AI廟公為您解籤詩 | Shake fortune sticks, AI Oracle interprets your fortune" />
-    <meta property="og:type" content="website" />
+    <meta name="description" content="PM里長伯解籤大師 - Cyberpunk HUD Fortune Oracle" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <title>PM里長伯解籤大師 | Fortune Stick Oracle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>PM里長伯解籤大師 | Cyber Oracle</title>
+    <style>
+      /* Print styles */
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #print-area, #print-area * {
+          visibility: visible;
+        }
+        #print-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          background: white !important;
+          color: black !important;
+          padding: 40px;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

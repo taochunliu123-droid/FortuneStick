@@ -6,32 +6,45 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'serif-tc': ['"Noto Serif TC"', 'serif'],
-        'cinzel': ['Cinzel', 'serif'],
-      },
       colors: {
-        'temple-gold': '#ffd700',
-        'temple-red': '#8B0000',
-        'temple-brown': '#8B4513',
+        'cyber-cyan': '#00FFFF',
+        'cyber-blue': '#0080FF',
+        'cyber-purple': '#8B5CF6',
+        'cyber-pink': '#FF00FF',
+        'cyber-dark': '#0a0a0f',
+        'cyber-darker': '#050508',
+      },
+      fontFamily: {
+        'cyber': ['Orbitron', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
       },
       animation: {
         'glow-pulse': 'glowPulse 2s ease-in-out infinite',
-        'smoke-move': 'smokeMove 20s ease-in-out infinite',
-        'lantern-glow': 'lanternGlow 3s ease-in-out infinite',
+        'scan-line': 'scanLine 8s linear infinite',
+        'flicker': 'flicker 0.15s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'rotate-slow': 'rotateSlow 20s linear infinite',
       },
       keyframes: {
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(255, 215, 0, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(255, 215, 0, 0.8)' },
+          '0%, 100%': { filter: 'drop-shadow(0 0 10px currentColor)' },
+          '50%': { filter: 'drop-shadow(0 0 25px currentColor)' },
         },
-        smokeMove: {
-          '0%, 100%': { transform: 'translateY(0) scale(1)' },
-          '50%': { transform: 'translateY(-20px) scale(1.05)' },
+        scanLine: {
+          '0%': { transform: 'translateY(-100vh)' },
+          '100%': { transform: 'translateY(100vh)' },
         },
-        lanternGlow: {
-          '0%, 100%': { boxShadow: '0 0 30px rgba(255, 50, 0, 0.6)' },
-          '50%': { boxShadow: '0 0 50px rgba(255, 100, 0, 0.8)' },
+        flicker: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        rotateSlow: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
         },
       },
     },
