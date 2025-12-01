@@ -8,6 +8,11 @@
   --cyber-purple: #8B5CF6;
   --cyber-pink: #FF00FF;
   --cyber-gold: #FFD700;
+  --wood-dark: #4a3728;
+  --wood-mid: #6b4423;
+  --wood-light: #8b5a2b;
+  --bamboo-light: #d4b896;
+  --bamboo-dark: #a67c52;
 }
 
 * {
@@ -20,7 +25,7 @@ body {
   font-family: 'Noto Sans TC', 'Orbitron', sans-serif;
   background: #0a0a0f;
   color: var(--cyber-cyan);
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -67,6 +72,11 @@ body {
   animation: scanLine 8s linear infinite;
 }
 
+@keyframes scanLine {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
 /* HUD Frame */
 .hud-frame {
   position: fixed;
@@ -86,33 +96,10 @@ body {
   opacity: 0.7;
 }
 
-.hud-corner.top-left {
-  top: 20px;
-  left: 20px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.hud-corner.top-right {
-  top: 20px;
-  right: 20px;
-  border-left: none;
-  border-bottom: none;
-}
-
-.hud-corner.bottom-left {
-  bottom: 20px;
-  left: 20px;
-  border-right: none;
-  border-top: none;
-}
-
-.hud-corner.bottom-right {
-  bottom: 20px;
-  right: 20px;
-  border-left: none;
-  border-top: none;
-}
+.hud-corner.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.hud-corner.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+.hud-corner.bottom-left { bottom: 70px; left: 20px; border-right: none; border-top: none; }
+.hud-corner.bottom-right { bottom: 70px; right: 20px; border-left: none; border-top: none; }
 
 /* Glow effects */
 .glow-cyan {
@@ -208,68 +195,121 @@ body {
   50% { transform: translateX(100%); }
 }
 
-/* Fortune container - 3D holographic */
+/* ====== WOODEN FORTUNE CONTAINER (籤筒) ====== */
 .fortune-container {
-  width: 180px;
-  height: 280px;
+  width: 140px;
+  height: 260px;
   position: relative;
-  transform-style: preserve-3d;
   perspective: 1000px;
 }
 
 .fortune-tube {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 255, 255, 0.05) 0%,
-    rgba(0, 255, 255, 0.15) 50%,
-    rgba(0, 255, 255, 0.05) 100%
-  );
-  border: 2px solid rgba(0, 255, 255, 0.5);
-  border-radius: 20px 20px 50% 50%;
   position: relative;
-  box-shadow: 
-    0 0 30px rgba(0, 255, 255, 0.3),
-    inset 0 0 30px rgba(0, 255, 255, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.fortune-tube:hover {
-  box-shadow: 
-    0 0 50px rgba(0, 255, 255, 0.5),
-    inset 0 0 50px rgba(0, 255, 255, 0.2);
-}
-
-.fortune-tube::before {
-  content: '';
+/* Wooden barrel body */
+.fortune-tube-body {
   position: absolute;
-  top: 5%;
-  left: 10%;
-  width: 80%;
-  height: 30%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 255, 255, 0.2) 0%,
-    transparent 100%
-  );
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Wood grain texture */
+    repeating-linear-gradient(
+      90deg,
+      var(--wood-dark) 0px,
+      var(--wood-mid) 2px,
+      var(--wood-light) 4px,
+      var(--wood-mid) 6px,
+      var(--wood-dark) 8px
+    );
+  border-radius: 15px 15px 50% 50%;
+  box-shadow: 
+    inset -20px 0 30px rgba(0,0,0,0.4),
+    inset 20px 0 30px rgba(255,255,255,0.1),
+    inset 0 -30px 40px rgba(0,0,0,0.5),
+    0 10px 30px rgba(0,0,0,0.8),
+    0 0 30px rgba(0, 255, 255, 0.2);
 }
 
-/* Fortune sticks */
+/* Bamboo ring bands */
+.fortune-tube-bands {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 8%,
+      var(--bamboo-dark) 8%,
+      var(--bamboo-light) 10%,
+      var(--bamboo-dark) 12%,
+      transparent 12%,
+      transparent 25%,
+      var(--bamboo-dark) 25%,
+      var(--bamboo-light) 27%,
+      var(--bamboo-dark) 29%,
+      transparent 29%,
+      transparent 70%,
+      var(--bamboo-dark) 70%,
+      var(--bamboo-light) 72%,
+      var(--bamboo-dark) 74%,
+      transparent 74%
+    );
+  border-radius: 15px 15px 50% 50%;
+  pointer-events: none;
+}
+
+/* Inner shadow (opening) */
+.tube-inner {
+  position: absolute;
+  top: 5px;
+  left: 15%;
+  width: 70%;
+  height: 30px;
+  background: radial-gradient(ellipse at center, #1a0f0a 0%, #2a1a12 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 5px 15px rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+/* Fortune sticks - bamboo style */
 .fortune-stick {
   position: absolute;
   width: 6px;
   background: linear-gradient(
     90deg,
-    rgba(255, 215, 0, 0.8) 0%,
-    rgba(255, 255, 200, 1) 50%,
-    rgba(255, 215, 0, 0.8) 100%
+    var(--bamboo-dark) 0%,
+    var(--bamboo-light) 30%,
+    #e8d4b8 50%,
+    var(--bamboo-light) 70%,
+    var(--bamboo-dark) 100%
   );
-  border-radius: 2px;
+  border-radius: 2px 2px 1px 1px;
   transform-origin: bottom center;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  box-shadow: 
+    1px 0 2px rgba(0,0,0,0.3),
+    -1px 0 2px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Stick number marking */
+.fortune-stick::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #8B0000 0%, #5c0000 100%);
+  border-radius: 1px;
 }
 
 /* Shaking animation */
@@ -282,6 +322,16 @@ body {
 
 .shaking {
   animation: shake 0.12s ease-in-out infinite;
+}
+
+/* Hover glow effect */
+.fortune-tube:hover .fortune-tube-body {
+  box-shadow: 
+    inset -20px 0 30px rgba(0,0,0,0.4),
+    inset 20px 0 30px rgba(255,255,255,0.1),
+    inset 0 -30px 40px rgba(0,0,0,0.5),
+    0 10px 30px rgba(0,0,0,0.8),
+    0 0 50px rgba(0, 255, 255, 0.4);
 }
 
 /* Hand tracking canvas */
@@ -358,18 +408,58 @@ body {
   margin-bottom: 10px;
 }
 
+/* Floating footer */
+.floating-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 10, 20, 0.95) 30%);
+  padding: 20px 20px 15px;
+  z-index: 100;
+  text-align: center;
+}
+
+.floating-footer a {
+  color: var(--cyber-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.floating-footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--cyber-cyan);
+}
+
 /* Print area styles */
 #print-area {
   display: none;
 }
 
 @media print {
+  body * {
+    visibility: hidden;
+  }
+  
   #print-area {
+    visibility: visible !important;
     display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     background: white !important;
     color: black !important;
     padding: 40px !important;
     font-family: 'Noto Sans TC', serif !important;
+  }
+  
+  #print-area * {
+    visibility: visible !important;
   }
   
   #print-area h1 {
@@ -408,18 +498,22 @@ body {
     color: #333 !important;
   }
   
-  #print-area .footer {
+  #print-area .footer-print {
     text-align: center !important;
     margin-top: 40px !important;
     color: #666 !important;
     font-size: 12px !important;
+  }
+  
+  .no-print {
+    display: none !important;
   }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .fortune-container {
-    width: 140px;
+    width: 120px;
     height: 220px;
   }
   
@@ -432,4 +526,18 @@ body {
     padding: 10px 20px;
     font-size: 12px;
   }
+  
+  .floating-footer a {
+    font-size: 11px;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
 }
