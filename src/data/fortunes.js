@@ -1,0 +1,525 @@
+// 觀音靈籤 60首
+export const fortunePoems = [
+  {
+    number: 1,
+    level: "上上籤",
+    levelEn: "Supreme Fortune",
+    poem: "日出便見風雲散，光明清靜照世間。一向前途通大道，萬事清吉保平安。",
+    poemEn: "When the sun rises, clouds disperse. Bright and clear light shines upon the world. The path ahead leads to great roads. All matters bring peace and safety.",
+    interpretation: "大吉大利，萬事亨通"
+  },
+  {
+    number: 2,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "盈虛消息總天時，自此君當百事宜。若問前程歸宿處，更須方寸好修持。",
+    poemEn: "Fullness and emptiness follow heaven's time. From now, all matters suit you well. If asking where your future leads, cultivate your heart with care.",
+    interpretation: "順應天時，修身養性"
+  },
+  {
+    number: 3,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "衣食自然生處有，勸君不用苦勞心。但能孝悌存忠信，福祿來成禍不侵。",
+    poemEn: "Sustenance naturally comes to you. No need to toil and worry so. Practice filial piety and loyalty. Fortune comes, misfortune stays away.",
+    interpretation: "知足常樂，行善積德"
+  },
+  {
+    number: 4,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "君今百事且隨緣，水到渠成聽自然。莫聽旁人閒說話，挺身自立待時年。",
+    poemEn: "Let all matters follow fate for now. Water flows where channels form. Ignore idle gossip from others. Stand firm and wait for your time.",
+    interpretation: "隨緣而行，靜待時機"
+  },
+  {
+    number: 5,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "一生心事總難成，幸有高人指點明。若問前程歸宿處，須憑方寸作良朋。",
+    poemEn: "Life's aspirations hard to achieve. Fortunately wise ones guide the way. If asking where your future leads, let your heart become your friend.",
+    interpretation: "貴人相助，內省修心"
+  },
+  {
+    number: 6,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "投身巖下銅雀臺，須憑玉燕報春來。良緣自有佳期會，咫尺青雲路大開。",
+    poemEn: "Cast yourself beneath the bronze tower. Jade swallows herald spring's arrival. Good fate brings perfect timing. Blue clouds open paths nearby.",
+    interpretation: "好事將近，把握良機"
+  },
+  {
+    number: 7,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "奔波勞碌費精神，一事無成空苦辛。且把心田勤種植，秋來自有好收成。",
+    poemEn: "Rushing about exhausts your spirit. Nothing achieved despite hard work. Cultivate your heart's garden well. Autumn brings its own harvest.",
+    interpretation: "踏實耕耘，終有收穫"
+  },
+  {
+    number: 8,
+    level: "上上籤",
+    levelEn: "Supreme Fortune",
+    poem: "茂林松柏正興旺，雨過天青色更鮮。一條大路通霄漢，凡事謀為盡得全。",
+    poemEn: "Dense pine forests flourish well. After rain, skies turn even brighter. One great road leads to the heavens. All endeavors fully succeed.",
+    interpretation: "大吉，凡事皆順"
+  },
+  {
+    number: 9,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "風雲不順路難通，命中自有暗相衝。須憑積德陰功力，方得光明在望中。",
+    poemEn: "Wind and clouds block your path. Fate holds hidden conflicts now. Rely on accumulated virtues. Then brightness comes within sight.",
+    interpretation: "暫時不順，積德消災"
+  },
+  {
+    number: 10,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "石中美玉未分明，待得高人一剖清。莫道無緣終有遇，此時正好問前程。",
+    poemEn: "Jade in stone remains unclear. Wait for masters to reveal it. Don't say there's no chance meeting. Now is time to ask your future.",
+    interpretation: "潛力待發，等待伯樂"
+  },
+  {
+    number: 11,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "靈雞漸漸見分明，凡事謀為盡可行。前途自有光明處，好把絲綸佐聖明。",
+    poemEn: "The sacred rooster becomes clear. All plans can now proceed. Brightness lies ahead on your path. Help wisdom with your efforts.",
+    interpretation: "時來運轉，大有可為"
+  },
+  {
+    number: 12,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "營求皆在暗中藏，莫道無蹤問不將。若使行人終日待，出門須向正東方。",
+    poemEn: "What you seek hides in darkness. Don't say it cannot be found. If travelers wait all day long, head east when leaving home.",
+    interpretation: "方向明確，耐心等待"
+  },
+  {
+    number: 13,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "自小生來富貴身，不曾作事惹埃塵。須知過往前愆債，好把經文念幾分。",
+    poemEn: "Born to wealth and comfort, never sullied by the world. Know your past life's karmic debts. Recite scriptures to repay.",
+    interpretation: "反省過去，誠心懺悔"
+  },
+  {
+    number: 14,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "宛如仙鶴出凡籠，脫卻塵埃入太空。財祿兩般俱稱意，年年福壽沐春風。",
+    poemEn: "Like a crane freed from its cage, shedding dust to soar the sky. Wealth and status both achieved. Year by year, blessed by spring winds.",
+    interpretation: "突破困境，前程似錦"
+  },
+  {
+    number: 15,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "行人千里未回歸，消息全無實可悲。須憑一片心虔禱，自然福至禍消時。",
+    poemEn: "Travelers far have not returned. No news at all, truly sad. Pray with sincere devotion. Fortune comes, misfortune fades.",
+    interpretation: "虔心祈禱，靜待佳音"
+  },
+  {
+    number: 16,
+    level: "上上籤",
+    levelEn: "Supreme Fortune",
+    poem: "天開地闢結良緣，日吉時良萬事全。若得此籤誠可賀，管教福祿永綿延。",
+    poemEn: "Heaven and earth create good bonds. Auspicious times complete all things. If you receive this fortune, endless blessings shall be yours.",
+    interpretation: "大吉大利，福祿雙全"
+  },
+  {
+    number: 17,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "莫聽閒言與是非，晦明終始太陽歸。須憑謹慎防危險，管取亨通福不虧。",
+    poemEn: "Ignore idle gossip and disputes. Darkness and light end with the sun. Be cautious to prevent danger. Success and fortune won't be lost.",
+    interpretation: "謹言慎行，避開是非"
+  },
+  {
+    number: 18,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "命中正逢羅計臨，官非口舌及財沉。若得持齋修懺悔，自然消散禍無侵。",
+    poemEn: "Fate brings obstacles your way. Lawsuits, gossip, sinking wealth. Fast and repent sincerely. Disasters naturally disperse.",
+    interpretation: "暫避風頭，修身養德"
+  },
+  {
+    number: 19,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "急水灘頭放小舟，須憑舵手定沉浮。若能得過前江去，別有佳境在前頭。",
+    poemEn: "A small boat on rushing rapids. The helmsman decides if you sink or float. If you pass the river ahead, beautiful scenery awaits.",
+    interpretation: "把握方向，勇往直前"
+  },
+  {
+    number: 20,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "當空皓月明如鏡，何用青燈照路行。須憑待價而沽貨，方得光明在望中。",
+    poemEn: "The bright moon shines like a mirror. No need for lamps to light the way. Wait for the right price to sell. Then brightness comes within sight.",
+    interpretation: "等待時機，待價而沽"
+  },
+  {
+    number: 21,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "陰陽道合總由天，女嫁男婚福壽全。只願今朝逢好日，眾星拱照結良緣。",
+    poemEn: "Yin and yang unite by heaven's will. Marriage brings full fortune and longevity. May today be auspicious. Stars align for perfect bonds.",
+    interpretation: "姻緣和合，喜事將至"
+  },
+  {
+    number: 22,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "君今庚甲未亨通，且向江頭垂釣翁。一遇風雲須發跡，許君榮貴在其中。",
+    poemEn: "Your fortune hasn't bloomed yet. Be like the old fisherman by the river. When wind and clouds arrive, rise up. Glory awaits within.",
+    interpretation: "韜光養晦，等待機遇"
+  },
+  {
+    number: 23,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "有意興為一事難，須憑耐守待時安。若能得過初中旬，後二十日遂心歡。",
+    poemEn: "Intentions face difficulties. Wait patiently for safe times. If you pass the first fortnight, the next twenty days bring joy.",
+    interpretation: "耐心等待，後運漸佳"
+  },
+  {
+    number: 24,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "君問求財事若何，朝朝恰似網魚梭。莫道信中難得利，只消一念自開合。",
+    poemEn: "You ask about seeking wealth. Daily like casting fishing nets. Don't say faith brings no profit. One sincere thought opens all.",
+    interpretation: "財運亨通，誠心可得"
+  },
+  {
+    number: 25,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "過了憂危事自然，月明星朗照君前。待時方可施謀略，得意自然福壽全。",
+    poemEn: "After danger, things settle naturally. Moon and stars shine before you. Wait for the right time to plan. Success brings full fortune.",
+    interpretation: "危機過後，柳暗花明"
+  },
+  {
+    number: 26,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "穩駕安車驅駿馬，長江風送一帆舟。耕田得利果無疑，一切求謀盡可求。",
+    poemEn: "Steady carriage with fine horses. Wind carries your sail on the great river. Farming surely brings rewards. All plans can be pursued.",
+    interpretation: "順風順水，事事如意"
+  },
+  {
+    number: 27,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "一春風雨正瀟瀟，千里行人正阻遙。倘若渡前無限水，等閒平地有波濤。",
+    poemEn: "Spring wind and rain fall heavily. Travelers face distant obstacles. If waters block the crossing ahead, even flat ground has waves.",
+    interpretation: "謹慎行事，防範未然"
+  },
+  {
+    number: 28,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "東邊月上正嬋娟，頃刻雲遮亦暗然。或有圓時還有缺，須憑造化待時年。",
+    poemEn: "The eastern moon rises beautifully. Suddenly clouds darken it. There are times of fullness and lack. Wait for fate and proper timing.",
+    interpretation: "陰晴不定，順其自然"
+  },
+  {
+    number: 29,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "寶劍出匣耀光明，在匣全然不惹塵。今得貴人來提拔，正如撥雲見太陽。",
+    poemEn: "A treasure sword emerges, shining bright. In its sheath, it gathered no dust. Now nobles come to lift you up. Like parting clouds to see the sun.",
+    interpretation: "貴人相助，光芒綻放"
+  },
+  {
+    number: 30,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "勸君切莫向他求，須憑自己作根由。果能守己勤和儉，天理昭彰福自收。",
+    poemEn: "Don't seek help from others. Rely on yourself as the foundation. If you guard yourself with diligence and thrift, heaven's justice brings fortune.",
+    interpretation: "自力更生，勤儉致福"
+  },
+  {
+    number: 31,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "當日太公渭水濱，八十才逢文王聘。君今倘若逢此數，雲遊霄漢幸吾身。",
+    poemEn: "In old days, Jiang Ziya by Wei River. At eighty, met King Wen's invitation. If you encounter such fortune now, soar through the heavens joyfully.",
+    interpretation: "大器晚成，終遇明主"
+  },
+  {
+    number: 32,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "舉頭仰望碧雲天，青紅霓彩現前邊。須知草木逢春發，莫道花開不再圓。",
+    poemEn: "Look up at the blue cloud sky. Rainbow colors appear ahead. Know that plants bloom in spring. Don't say flowers won't bloom again.",
+    interpretation: "希望在前，春天將至"
+  },
+  {
+    number: 33,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "天邊雷動便風雲，雷過風來兩不分。須憑持身作好事，待時逢吉遇高人。",
+    poemEn: "Thunder at horizon brings wind and clouds. After thunder, wind comes mixed. Conduct yourself with good deeds. Wait for luck to meet nobles.",
+    interpretation: "動盪時期，行善待時"
+  },
+  {
+    number: 34,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "春來花發映陽台，萬里風光眼界開。須是守成兼積善，榮華富貴自然來。",
+    poemEn: "Spring flowers bloom by sunny terraces. Ten thousand miles of scenery open wide. Guard your achievements and accumulate virtue. Glory and wealth naturally arrive.",
+    interpretation: "守成積善，富貴自來"
+  },
+  {
+    number: 35,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "衣祿平平過一生，不須作福並求名。須憑一片心中好，自然天眼照分明。",
+    poemEn: "Average sustenance through life. No need for merit or fame-seeking. Just keep goodness in your heart. Heaven's eye sees clearly.",
+    interpretation: "平淡是福，心善為上"
+  },
+  {
+    number: 36,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "眼前顯現一青山，造化須憑一念間。莫道此山無路進，青雲有路許君攀。",
+    poemEn: "A green mountain appears before your eyes. Creation depends on a single thought. Don't say this mountain has no path. Blue clouds have routes for you to climb.",
+    interpretation: "機會出現，勇於攀登"
+  },
+  {
+    number: 37,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此事分明在水邊，更須一念達三天。若能得遇貴人助，破盡愁雲福自全。",
+    poemEn: "This matter clearly lies by water. One thought must reach the three heavens. If you meet noble helpers, sorrows disperse, fortune completes.",
+    interpretation: "水邊有緣，貴人相助"
+  },
+  {
+    number: 38,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "君今命運不亨通，且向幽居靜處行。須憑謹守平安計，待得雲開見太陽。",
+    poemEn: "Your fortune now is not smooth. Go to quiet, secluded places. Carefully guard peaceful plans. Wait for clouds to part for sun.",
+    interpretation: "暫避風頭，靜待轉機"
+  },
+  {
+    number: 39,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "一片真心在此中，更須火急建奇功。果然動得天顏喜，萬里青雲一路通。",
+    poemEn: "True sincerity lies within. Urgently build remarkable deeds. If heaven is truly pleased, blue clouds open your path for miles.",
+    interpretation: "真心誠意，功成名就"
+  },
+  {
+    number: 40,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此事如今正可宜，看看日下有分時。若得進前須努力，凡事謹慎好施為。",
+    poemEn: "This matter now suits the time. Soon there will be division. If advancing, work diligently. Act carefully in all matters.",
+    interpretation: "時機恰當，謹慎進取"
+  },
+  {
+    number: 41,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "正是揚帆便順風，一程千里又重重。須知到處皆通達，何用憂心寸步中。",
+    poemEn: "Sails raised, favorable winds blow. A thousand miles, layer upon layer. Know that everywhere is reachable. Why worry about every step?",
+    interpretation: "一帆風順，萬事亨通"
+  },
+  {
+    number: 42,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此事分明指日間，須知進退莫胡言。但存正直修天道，自然天網照君前。",
+    poemEn: "This matter points to daylight soon. Know when to advance or retreat. Keep righteous ways and follow heaven. Heaven's net illuminates your path.",
+    interpretation: "進退有度，正道光明"
+  },
+  {
+    number: 43,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "經年動作皆無功，莫道蒼天不順從。須憑一片虔誠意，自有高人指路通。",
+    poemEn: "Years of effort yield nothing. Don't blame heaven for not cooperating. With sincere devotion in your heart, wise ones will show the way.",
+    interpretation: "虔誠祈禱，等待指引"
+  },
+  {
+    number: 44,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "棠棣連枝各自榮，有如松柏四時青。兄弟同心同協力，門閭光彩慶佳成。",
+    poemEn: "Connected branches flourish separately. Like evergreen pines and cypresses. Brothers united in heart and effort. Family glory celebrates success.",
+    interpretation: "兄弟同心，家門興旺"
+  },
+  {
+    number: 45,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此事分明正可期，須憑方寸好修持。若能進退皆知足，管教財祿自相隨。",
+    poemEn: "This matter can clearly be expected. Cultivate your heart with care. If you know contentment in all things, wealth and status will follow.",
+    interpretation: "知足常樂，福祿自來"
+  },
+  {
+    number: 46,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "功名富貴自天排，一點機心莫妄猜。只把心田勤種植，天生原有福胚來。",
+    poemEn: "Fame and wealth are heaven-arranged. Don't guess with scheming mind. Just cultivate your heart's garden. You were born with fortune's seed.",
+    interpretation: "天命所歸，順其自然"
+  },
+  {
+    number: 47,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此事看來漸有期，須憑禮佛保安危。若能刻意勤修進，管教榮華福祿歸。",
+    poemEn: "This matter seems to have its time. Pray to Buddha for safety. If you sincerely cultivate progress, glory and fortune shall return.",
+    interpretation: "虔心修行，福報將至"
+  },
+  {
+    number: 48,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "魚行舊路遭羅網，鳥宿危巢恐禍殃。若欲趨吉並避凶，須憑謹慎保安康。",
+    poemEn: "Fish on old paths meet nets. Birds in dangerous nests fear disaster. To seek luck and avoid misfortune, be cautious to stay healthy.",
+    interpretation: "小心謹慎，避開危險"
+  },
+  {
+    number: 49,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "天晴已久望甘霖，雨過還期雨更臨。春到花開俱有意，好將消息問知音。",
+    poemEn: "Long sunny days await sweet rain. After rain, more rain comes again. Spring brings flowers with purpose. Share news with understanding friends.",
+    interpretation: "久旱逢甘霖，好事連連"
+  },
+  {
+    number: 50,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "五湖四海任君行，高掛風帆自在遊。若是此身謀劃好，管教無處不逢秋。",
+    poemEn: "Five lakes and four seas open to you. Raise your sails and travel freely. If you plan this life well, autumn harvest awaits everywhere.",
+    interpretation: "自由自在，謀劃得當"
+  },
+  {
+    number: 51,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "一道靈光照眼前，莫道此門無路通。須憑功德消諸業，自有光明在望中。",
+    poemEn: "A spiritual light shines before your eyes. Don't say this path has no way through. Rely on virtuous deeds to clear karma. Brightness awaits within your sight.",
+    interpretation: "靈光乍現，積德消業"
+  },
+  {
+    number: 52,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "今年運勢正亨通，禍去福來萬事融。須憑一念存心好，自有高人指路通。",
+    poemEn: "This year's fortune flows smoothly. Misfortune leaves, blessings come, all harmonizes. Keep good intentions in your heart. Wise ones will guide your path.",
+    interpretation: "運勢轉好，貴人指點"
+  },
+  {
+    number: 53,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "此籤降處事難明，且把心中靜養成。若得持齋修福業，自然禍散福來臨。",
+    poemEn: "This fortune's meaning is unclear. Quietly cultivate your heart. If you fast and build merit, disasters disperse, blessings arrive.",
+    interpretation: "靜心修養，消災得福"
+  },
+  {
+    number: 54,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "福如東海壽南山，日月光華照世間。一生衣祿皆隨意，何用勞心費力攀。",
+    poemEn: "Fortune vast as eastern seas, longevity like southern mountains. Sun and moon illuminate the world. Sustenance follows your wishes. No need to toil and climb.",
+    interpretation: "福壽雙全，心想事成"
+  },
+  {
+    number: 55,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "萬里雲程一息間，須知平地有波瀾。但能謹慎勤修福，管教青雲路上看。",
+    poemEn: "Ten thousand miles in one breath. Know that flat land has hidden waves. If careful and diligent in merit, blue cloud paths open to you.",
+    interpretation: "勤修福德，步步高升"
+  },
+  {
+    number: 56,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "此籤分明大吉昌，百般謀望盡成章。縱然今日愁煩事，月出光明福自長。",
+    poemEn: "This fortune clearly shows great luck. All plans and hopes become reality. Even today's worries and troubles, moonlight brings lasting blessings.",
+    interpretation: "大吉大利，百事如意"
+  },
+  {
+    number: 57,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "一輪月照正當天，萬里浮雲掃盡邊。此際佳音來報信，心中疑慮自消然。",
+    poemEn: "Full moon illuminates the sky. Floating clouds swept away for miles. Good news arrives at this time. Doubts in your heart naturally fade.",
+    interpretation: "佳音將至，疑慮消散"
+  },
+  {
+    number: 58,
+    level: "下籤",
+    levelEn: "Lesser Fortune",
+    poem: "事到頭來總是虛，須憑方寸好安居。若能守己修天道，自有光明照爾廬。",
+    poemEn: "Matters ultimately prove empty. Cultivate your heart for peace. If you guard yourself on heaven's path, light will illuminate your home.",
+    interpretation: "放下執著，修心養性"
+  },
+  {
+    number: 59,
+    level: "上籤",
+    levelEn: "Great Fortune",
+    poem: "此籤分明定吉祥，萬般謀望稱心腸。須知福祿天生定，莫把愁眉皺一場。",
+    poemEn: "This fortune clearly shows auspiciousness. All hopes satisfy your heart. Know that fortune is heaven-destined. Don't furrow your brow in worry.",
+    interpretation: "天定吉祥，無須煩憂"
+  },
+  {
+    number: 60,
+    level: "中籤",
+    levelEn: "Moderate Fortune",
+    poem: "此籤正好遇春時，萬事謀為盡可期。但把心田勤耕種，自然福祿不愁稀。",
+    poemEn: "This fortune meets springtime well. All plans can be expected. Cultivate your heart's garden diligently. Fortune naturally won't be scarce.",
+    interpretation: "春暖花開，耕耘有成"
+  }
+];
+
+// Translations
+export const translations = {
+  zh: {
+    title: "PM里長伯解籤大師",
+    subtitle: "誠心祈願 • 靈籤指引",
+    inputPlaceholder: "心中默念您想問的問題（可不填）...",
+    shakeButton: "搖籤筒",
+    shaking: "搖動中...",
+    drawAgain: "重新求籤",
+    fortuneNumber: "第 {number} 籤",
+    poem: "籤詩",
+    interpretation: "解籤",
+    oracleThinking: "廟公正在解讀您的籤詩...",
+    oracleGreeting: "善信您好，讓我為您解讀這支籤...",
+    instructions: "點擊籤筒搖動求籤",
+    yourQuestion: "您的問題",
+    langSwitch: "English",
+    footer: "心誠則靈 • 善緣廣結",
+    apiKeyPlaceholder: "請輸入您的 Anthropic API Key（可選）",
+    apiKeyHint: "如不填寫，將顯示籤詩基本解釋"
+  },
+  en: {
+    title: "PM Mayors Fortune Oracle",
+    subtitle: "Sincere Prayer • Divine Guidance",
+    inputPlaceholder: "Silently think of your question (optional)...",
+    shakeButton: "Shake the Sticks",
+    shaking: "Shaking...",
+    drawAgain: "Draw Again",
+    fortuneNumber: "Fortune #{number}",
+    poem: "Fortune Poem",
+    interpretation: "Interpretation",
+    oracleThinking: "The Oracle is reading your fortune...",
+    oracleGreeting: "Greetings, devotee. Let me interpret this fortune for you...",
+    instructions: "Click the container to shake and draw",
+    yourQuestion: "Your Question",
+    langSwitch: "中文",
+    footer: "Sincerity Brings Blessings • Good Karma Connects All",
+    apiKeyPlaceholder: "Enter your Anthropic API Key (optional)",
+    apiKeyHint: "If empty, basic interpretation will be shown"
+  }
+};

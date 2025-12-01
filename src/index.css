@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif TC', serif;
+  background: linear-gradient(135deg, #1a0a0a 0%, #2d1810 50%, #1a0505 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.english-font {
+  font-family: 'Cinzel', serif;
+}
+
+/* Glowing effects */
+.glow-gold {
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffa500, 0 0 30px #ff8c00;
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 100, 0, 0.3);
+}
+
+/* Smoke background effect */
+.smoke-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(255,200,150,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,150,100,0.1) 0%, transparent 50%);
+  animation: smokeMove 20s ease-in-out infinite;
+}
+
+@keyframes smokeMove {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* Stick container */
+.stick-container {
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(180deg, #8B4513 0%, #654321 50%, #4a3218 100%);
+  border-radius: 20px 20px 50% 50%;
+  position: relative;
+  box-shadow: 
+    inset 0 -20px 40px rgba(0,0,0,0.5),
+    0 10px 30px rgba(0,0,0,0.8),
+    0 0 50px rgba(255, 150, 50, 0.3);
+  cursor: grab;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.stick-container:active {
+  cursor: grabbing;
+}
+
+.stick-container::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%);
+  border-radius: 50%;
+}
+
+/* Individual fortune stick */
+.fortune-stick {
+  position: absolute;
+  width: 8px;
+  background: linear-gradient(90deg, #daa520 0%, #ffd700 50%, #daa520 100%);
+  border-radius: 2px 2px 4px 4px;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-out;
+}
+
+/* Shaking animation */
+@keyframes shake {
+  0%, 100% { transform: rotate(-3deg) translateX(0); }
+  25% { transform: rotate(3deg) translateX(-5px); }
+  50% { transform: rotate(-2deg) translateX(5px); }
+  75% { transform: rotate(2deg) translateX(-3px); }
+}
+
+.shaking {
+  animation: shake 0.15s ease-in-out infinite;
+}
+
+/* Fortune paper scroll */
+.fortune-scroll {
+  background: linear-gradient(180deg, #f5e6c8 0%, #e8d4a8 100%);
+  border: 3px solid #8B4513;
+  box-shadow: 
+    inset 0 0 20px rgba(139,69,19,0.2),
+    0 5px 20px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.fortune-scroll::before,
+.fortune-scroll::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(90deg, #8B4513 0%, #a0522d 50%, #8B4513 100%);
+}
+
+.fortune-scroll::before { top: 0; border-radius: 5px 5px 0 0; }
+.fortune-scroll::after { bottom: 0; border-radius: 0 0 5px 5px; }
+
+/* Oracle avatar */
+.oracle-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+}
+
+/* Typing cursor */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Temple button */
+.temple-button {
+  background: linear-gradient(180deg, #8B0000 0%, #5c0000 100%);
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.temple-button:hover {
+  background: linear-gradient(180deg, #a00000 0%, #700000 100%);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.temple-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Lantern decoration */
+.lantern {
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(ellipse at center, #ff3300 0%, #cc0000 70%, #990000 100%);
+  border-radius: 50% / 40%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 50, 0, 0.6);
+  animation: lanternGlow 3s ease-in-out infinite;
+}
+
+@keyframes lanternGlow {
+  0%, 100% { box-shadow: 0 0 30px rgba(255, 50, 0, 0.6); }
+  50% { box-shadow: 0 0 50px rgba(255, 100, 0, 0.8); }
+}
+
+.lantern::before {
+  content: '福';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffd700;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lantern::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 20px;
+  background: linear-gradient(180deg, #ffd700 0%, #ffaa00 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stick-container {
+    width: 150px;
+    height: 220px;
+  }
+  
+  .lantern {
+    width: 45px;
+    height: 60px;
+  }
+  
+  .lantern::before {
+    font-size: 18px;
+  }
+}
